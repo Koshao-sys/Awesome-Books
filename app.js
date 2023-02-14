@@ -26,7 +26,7 @@ function removeBook(title) {
 }
 
 function addRemoveListeners() {
-  const removeBtn = document.querySelectorAll('.book-item');
+  const removeBtn = document.querySelectorAll('.remove-button');
   for (let i = 0; i < removeBtn.length; i += 1) {
     removeBtn[i].addEventListener('click', () => {
       const tt = document.querySelectorAll('.book-title');
