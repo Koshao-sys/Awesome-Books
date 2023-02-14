@@ -6,7 +6,7 @@ function displayBooks() {
   bookListContainer.innerHTML = '';
   books.forEach((book) => {
     const bookItem = document.createElement('div');
-    bookItem.classList.add('book-item');
+    bookItem.setAttribute('class', 'book-item');
     bookItem.innerHTML = `
       <p class="book-title">${book.title}</p>
       <p class="book-author">${book.author}</p>
