@@ -14,6 +14,9 @@ function displayBooks() {
     `;
     bookListContainer.appendChild(bookItem);
   });
+  /* eslint-disable */
+  addRemoveListeners();
+  /* eslint-enable */
 }
 
 function removeBook(title) {
@@ -27,11 +30,14 @@ function removeBook(title) {
 
 function addRemoveListeners() {
   const removeBtn = document.querySelectorAll('.remove-button');
-  for (let i = 0; i < removeBtn.length; i += 1) {
-    removeBtn[i].addEventListener('click', () => {
-      const tt = document.querySelectorAll('.book-title');
-      removeBook(tt[i].textContent);
-    });
+  if (!removeBtn[0].hasAttribute('listening')) {
+    for (let i = 0; i < removeBtn.length; i += 1) {
+      removeBtn[i].addEventListener('click', () => {
+        const tt = document.querySelectorAll('.book-title');
+        removeBook(tt[i].textContent);
+      });
+      removeBtn[i].setAttribute('listening', true);
+    }
   }
 }
 
