@@ -4,40 +4,37 @@ const addBtn = document.getElementById('add-books');
 function displayBooks() {
   const bookListContainer = document.querySelector('.books-col');
   bookListContainer.innerHTML = '';
-  books.forEach((book) => {
+  for (let k = 0; k < books.length; k += 1) {
     const bookItem = document.createElement('div');
     bookItem.setAttribute('class', 'book-item');
     bookItem.innerHTML = `
-      <p class="book-title">${book.title}</p>
-      <p class="book-author">${book.author}</p>
-      <button class="remove-button">Remove</button>
+      <p class="book-title">${books[k].title}</p>
+      <p class="book-author">${books[k].author}</p>
+      <button class="remove-button${k}">Remove</button>
     `;
     bookListContainer.appendChild(bookItem);
-  });
+  }
   /* eslint-disable */
   addRemoveListeners();
   /* eslint-enable */
 }
 
-function removeBook(title) {
-  books = books.filter((book) => book.title !== title);
+function removeBook(index) {
+  /* eslint-disable */
+  books = books.filter((book, ind) => ind != index);
+  /* eslint-enable */
   localStorage.setItem('books', JSON.stringify(books));
   displayBooks();
-  /* eslint-disable */
-  addRemoveListeners();
-  /* eslint-enable */
 }
 
 function addRemoveListeners() {
-  const removeBtn = document.querySelectorAll('.remove-button');
-  if (!removeBtn[0].hasAttribute('listening')) {
-    for (let i = 0; i < removeBtn.length; i += 1) {
-      removeBtn[i].addEventListener('click', () => {
-        const tt = document.querySelectorAll('.book-title');
-        removeBook(tt[i].textContent);
-      });
-      removeBtn[i].setAttribute('listening', true);
-    }
+  const removeBtn = document.querySelectorAll('.book-item button');
+  for (let i = 0; i < removeBtn.length; i += 1) {
+    removeBtn[i].addEventListener('click', () => {
+      const btnClass = removeBtn[i].className;
+      const index = btnClass.replace('remove-button', '');
+      removeBook(index);
+    });
   }
 }
 
