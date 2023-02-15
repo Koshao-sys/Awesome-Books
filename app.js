@@ -73,3 +73,35 @@ if (localStorage.getItem('books')) {
   bookCollection.books = JSON.parse(localStorage.getItem('books'));
   bookCollection.displayBooks();
 }
+
+/* Date and time */
+
+const today = new Date();
+const options = {
+  month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
+};
+const formattedDate = today.toLocaleDateString('en-US', options);
+document.getElementById('datetime').innerHTML = formattedDate;
+
+/* Menu Control */
+
+function showDiv(index, id) {
+  document.getElementById('div1').style.display = 'none';
+  document.getElementById('div2').style.display = 'none';
+  document.getElementById('div3').style.display = 'none';
+  document.getElementById('link1').classList.remove('active');
+  document.getElementById('link2').classList.remove('active');
+  document.getElementById('link3').classList.remove('active');
+
+  id.classList.add('active');
+  document.getElementById(index).style.display = 'block';
+}
+
+const links = document.querySelectorAll('.nav-menu a');
+for (let n = 0; n < links.length; n += 1) {
+  links[n].addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = links[n].getAttribute('href');
+    showDiv(href.replace('#', ''), links[n]);
+  });
+}
