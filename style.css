@@ -21,6 +21,9 @@ body {
   height: 100%;
   overflow: auto;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nav-menu {
@@ -191,6 +194,11 @@ body {
   font-size: 22px;
 }
 
+.copyright p {
+  margin: 0;
+  padding: 10px;
+}
+
 .about ul {
   margin: 0;
   display: flex;
@@ -202,4 +210,11 @@ body {
 .about ul li p {
   font-size: 22px;
   margin: 0;
+}
+
+.copyright {
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px solid #000;
+  margin-top: 50px;
 }
