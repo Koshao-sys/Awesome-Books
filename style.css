@@ -5,11 +5,11 @@
 }
 
 body {
-  margin: 0
+  margin: 0;
 }
 
 .main {
-  background:url(./images/booksbg.jpg);
+  background: url(./images/booksbg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
