@@ -195,17 +195,17 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Koshao Kazungu Godfrey**
 
 - GitHub: [@Koshao-sys](https://github.com/Koshao-sys)
 - Twitter: [@KoshaoKG](https://twitter.com/KoshaoKG)
 - LinkedIn: [Kosh](https://www.linkedin.com/in/godfrey-kazungu-b8b81b245/)
 
-👤 **Author2**
+👤 **Victor Kanyi**
 
 - GitHub: [@jkanyi-web](https://github.com/jkanyi-web)
-<!--- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)-->
+- Twitter: [@jkanyi757](https://twitter.com/jkanyi757)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/kanyi-kanyi-6668aa188/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
