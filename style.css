@@ -55,13 +55,12 @@
   gap: 15px;
   margin-left: 25%;
   margin-right: 25%;
-  align-items: flex-end;
   width: 50%;
 }
 
 .add-container h2 {
-  margin-right: 60px;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .dash {
@@ -84,4 +83,5 @@
   float: right;
   border: black 2px solid;
   padding-top: 5px;
+  margin-left: auto;
 }
