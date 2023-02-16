@@ -65,9 +65,6 @@ addBtn.addEventListener('click', (e) => {
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
   bookCollection.addBook(title.value, author.value);
-  if(e.target.key === 'Enter') {
-    bookCollection.addBook(title.value, author.value);
-  }
   title.value = '';
   author.value = '';
 });
