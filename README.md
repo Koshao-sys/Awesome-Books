@@ -205,7 +205,7 @@ Example:
 
 - GitHub: [@jkanyi-web](https://github.com/jkanyi-web)
 - Twitter: [@jkanyi757](https://twitter.com/jkanyi757)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/kanyi-kanyi-6668aa188/)
+- LinkedIn: [Kanyi](https://linkedin.com/in/kanyi-kanyi-6668aa188/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
